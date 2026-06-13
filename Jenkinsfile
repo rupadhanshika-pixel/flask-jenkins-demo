@@ -10,7 +10,7 @@ pipeline {
 
         stage('Install Dependencies') {
             steps {
-                sh 'pip3 install flask'
+                sh 'python3 -m pip install flask'
             }
         }
 
