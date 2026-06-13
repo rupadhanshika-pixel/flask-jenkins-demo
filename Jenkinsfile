@@ -4,19 +4,19 @@ pipeline {
     stages {
         stage('Check Python') {
             steps {
-                bat 'python --version'
+                sh 'python3 --version'
             }
         }
 
         stage('Install Dependencies') {
             steps {
-                bat 'pip install flask'
+                sh 'pip3 install flask'
             }
         }
 
         stage('Test Application') {
             steps {
-                bat 'python -m py_compile app.py'
+                sh 'python3 -m py_compile app.py'
             }
         }
     }
